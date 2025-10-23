@@ -1,0 +1,13 @@
+section {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: black;
+  .navbar {
+    width: 100%;
+    z-index: 20;
+  }
+}

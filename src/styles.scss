@@ -1,7 +1,19 @@
-html,body{
-    background-color: black;
-    height: 100dvh;
-    width: 100dvw;
+html,
+body {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  height: clamp(100dvh, 100%, 1080px);
+  width: 100%;
+}
+
+:root{
+  --primary: #3c83f6;
+  --secondary: #2463eb;
+  --accent: #55a6f6; 
+  --no-hover: #a2a2a9;
+  --text-color-one: #fafafa;
+  --backround-shine: #3c83f659;
 }
 
 * {
@@ -17,10 +29,10 @@ html,body{
 
 @font-face {
   font-family: IBM Plex;
-  src: url('./assets/fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf');
+  src: url("./assets/fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf");
 }
 
 @font-face {
   font-family: Inter;
-  src: url('./assets/fonts/Inter/static/Inter_24pt-Regular.ttf');
+  src: url("./assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf");
 }

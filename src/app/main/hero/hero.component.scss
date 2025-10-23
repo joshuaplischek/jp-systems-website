@@ -1,0 +1,111 @@
+section {
+  width: clamp(320px, 100dvw, 1200px);
+  height: calc(100dvh - 50px);
+  min-height: 100%;
+  padding: 0 2.5rem;
+  display: flex;
+  overflow: hidden;
+  .backround {
+    background: radial-gradient(
+      circle,
+      var(--backround-shine) 0%,
+      transparent 60%
+    );
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    height: 800px;
+    pointer-events: none;
+    animation: pulse 8s infinite ease-in-out;
+    @keyframes pulse {
+      0%,
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.7;
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 1;
+      }
+    }
+  }
+  > div {
+    width: 50%;
+  }
+  .title-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .title-image {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      object-fit: cover;
+      box-shadow: 0 20px 40px hsla(0, 0%, 0%, 0.4);
+      transform: perspective(1000px) rotateY(-10deg) rotateX(5deg);
+      transition: transform 0.5s ease;
+      border-radius: 0.75rem;
+      &:hover {
+        transform: perspective(1000px) rotateY(0) rotateX(0);
+      }
+    }
+  }
+
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    .info {
+      span {
+        color: var(--primary);
+        font-family: IBM Plex;
+      }
+
+      h1 {
+        font-size: 5rem;
+        font-weight: 800;
+      }
+
+      h2 {
+        font-size: 1.75rem;
+        font-weight: 400;
+        color: var(--no-hover);
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        font-size: 1.125rem;
+        line-height: 1.6;
+        color: var(--no-hover);
+        max-width: 500px;
+      }
+    }
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center;
+      > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.75rem;
+        padding: 0 1rem;
+        height: 3rem;
+        font-size: 1rem;
+      }
+      .button-service {
+        color: var(--text-color-one);
+        background-color: var(--primary);
+      }
+      .button-contact {
+        border: 1px solid var(--primary);
+        background-color: transparent;
+        color: var(--primary);
+      }
+    }
+  }
+}
