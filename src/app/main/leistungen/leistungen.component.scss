@@ -1,0 +1,74 @@
+section {
+  width: clamp(320px, 100dvw, 1200px);
+  min-height: 100%;
+  padding: 0 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .leistungen-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
+    .leistungen-heading {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      width: 100%;
+      gap: 1rem;
+      h2 {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 1.125rem;
+        color: var(--no-hover);
+        text-align: center;
+        line-height: 1.5;
+      }
+    }
+    .leistungen {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+
+      .card {
+        background-color: #141415;
+        border: 1px solid #252528;
+        padding: 2rem;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        transition: all ease 0.3s;
+        .image-box {
+          width: 64px;
+          height: 64px;
+          background-color: color-mix(in srgb, var(--primary) 10%, transparent);
+          border-radius: 0.75rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all ease 0.3s;
+          color: var(--primary);
+        }
+        p {
+          transition: all ease 0.3s;
+          color: var(--no-hover);
+        }
+        &:hover {
+          transform: translateY(-10px);
+          background-color: var(--secondary);
+          p{
+            color: white;
+          }
+          .image-box {
+            background-color: color-mix(in srgb, #252528 50%, transparent);
+          }
+        }
+      }
+    }
+  }
+}

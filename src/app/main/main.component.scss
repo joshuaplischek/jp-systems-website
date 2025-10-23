@@ -6,7 +6,29 @@ section {
   max-width: 1200px;
   margin: 0 auto;
   background-color: black;
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 4rem;
+    .line {
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        transparent,
+        #252528 10%,
+        #252528 90%,
+        transparent
+      );
+      width: 100%;
+      border: none;
+      opacity: 0.6;
+      margin: 3rem 0;
+    }
+  }
   .navbar {
+    position: sticky;
+    top: 0;
     width: 100%;
     z-index: 20;
   }

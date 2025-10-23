@@ -6,11 +6,7 @@ section {
   display: flex;
   overflow: hidden;
   .backround {
-    background: radial-gradient(
-      circle,
-      var(--backround-shine) 0%,
-      transparent 60%
-    );
+    background: radial-gradient(circle, var(--backround-shine) 0%, transparent 60%);
     position: absolute;
     top: 50%;
     left: 50%;
