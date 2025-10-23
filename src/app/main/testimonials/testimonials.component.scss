@@ -16,9 +16,9 @@ section {
     h2 {
       font-size: 2.5rem;
     }
-    p{
-        font-size: 1.125rem;
-        color: var(--no-hover);
+    p {
+      font-size: 1.125rem;
+      color: var(--no-hover);
     }
   }
   .testimonials {
@@ -26,5 +26,44 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
     width: 100%;
+    .testimonials-card {
+      background-color: #141415;
+      border: 1px solid #252528;
+      border-radius: 1rem;
+      padding: 2rem;
+      gap: 2rem;
+      display: flex;
+      flex-direction: column;
+      transition: all ease 0.3s;
+      img {
+        height: 28px;
+        width: 28px;
+      }
+
+      p{
+        color: var(--no-hover);
+        font-style: italic;
+      }
+
+      .customer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #252528 ;
+        img {
+          height: 48px;
+          width: 48px;
+          border-radius: 100%;
+          border: 2px solid var(--primary);
+        }
+      }
+      &:hover{
+        scale: 1.01;
+        transform: translateY(-10px);
+        filter: drop-shadow( 0 0 5px var(--primary));
+      }
+    }
   }
 }
