@@ -10,6 +10,11 @@ footer {
     border-top: 1px solid #252528;
     justify-content: space-between;
     padding: 4rem 0;
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+      gap: 2.5rem;
+    }
     .footer-heading {
       .footer-logo {
         display: flex;
@@ -52,12 +57,17 @@ footer {
       }
     }
   }
+
   .socials {
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-top: 1px solid #252528;
     padding: 2.5rem 0;
+    @media (max-width: 700px) {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
     span {
       color: var(--no-hover);
       font-size: 14px;
@@ -79,6 +89,7 @@ footer {
           }
         }
       }
+
       .nofill {
         svg {
           fill: none;

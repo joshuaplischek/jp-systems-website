@@ -1,5 +1,10 @@
 <section>
-  <app-navbar class="navbar"></app-navbar>
+  @if (!isMobile) {
+    <app-navbar class="navbar"></app-navbar>
+  }
+  @if (isMobile) {
+    <app-mobile-nav class="navbar"></app-mobile-nav>
+  }
   <app-hero></app-hero>
   <div class="main-content">
     <app-leistungen></app-leistungen>

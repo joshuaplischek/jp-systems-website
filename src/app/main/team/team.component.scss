@@ -5,6 +5,7 @@ section {
   width: 100%;
   flex-direction: column;
   gap: 2rem;
+  padding: 0 2rem;
   .team-heading {
     text-align: center;
     h2 {
@@ -33,27 +34,29 @@ section {
       width: 500px;
       text-align: center;
       gap: 1rem;
+      @media (max-width: 600px) {
+        width: 100%;
+      }
       img {
         height: 120px;
         width: 120px;
         border: 2px solid var(--primary);
         border-radius: 100%;
       }
-      .teammate-info{
+      .teammate-info {
         display: flex;
         flex-direction: column;
         gap: 1rem;
 
-        h4{
-            font-size: 1.25rem;
-
+        h4 {
+          font-size: 1.25rem;
         }
-        span{
-            color: var(--primary);
-            font-family: IBM Plex;
+        span {
+          color: var(--primary);
+          font-family: IBM Plex;
         }
-        p{
-            color: var(--no-hover);
+        p {
+          color: var(--no-hover);
         }
       }
     }

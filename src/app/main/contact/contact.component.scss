@@ -4,6 +4,7 @@ section {
   justify-content: center;
   align-items: center;
   padding: 3rem 2rem;
+  overflow: hidden;
 
   .contact-background {
     background: radial-gradient(
@@ -50,7 +51,7 @@ section {
         gap: 0.5rem;
 
         a {
-            transition: all ease 0.3s;
+          transition: all ease 0.3s;
           color: var(--no-hover);
           &:hover {
             color: var(--primary);
@@ -104,6 +105,23 @@ section {
           background-color: var(--primary);
         }
       }
+    }
+  }
+
+  @media (max-width: 700px) {
+    .contact-content{
+        flex-direction: column;
+        gap: 3rem;
+        >div{ 
+            width: 100%;
+        }
+        .content-heading{
+            justify-content: center;
+            align-items: center;
+            p{
+              text-align: center;
+            }
+        }
     }
   }
 }
