@@ -11,20 +11,20 @@
             </div>
         </div>
         <div class="contact-form">
-            <form action="#" method="post">
+            <form (ngSubmit)="onSubmit(contactForm, contactForm)" #contactForm="ngForm" method="post">
                 <div>
                     <label for="Name">Name</label>
-                    <input type="text" id="name" name="fullName" placeholder="Ihr Name" required>
+                    <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="fullName" placeholder="Ihr Name" required>
                 </div>
 
                 <div>
                     <label for="email">Email</label>
-                    <input type="text" id="email" name="email" placeholder="Ihre E-Mail-Adresse" required>
+                    <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="Ihre E-Mail-Adresse" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
                 </div>
 
                 <div>
                     <label for="message">Nachricht</label>
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Wie kann ich helfen?"></textarea>
+                    <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" name="message" id="message" cols="30" rows="10" placeholder="Wie kann ich helfen?"></textarea>
                 </div>
 
                 <button type="submit">Senden</button>
