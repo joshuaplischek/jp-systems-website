@@ -63,22 +63,26 @@ if (!empty($response['errors'])) {
 // =======================
 // Mail versenden
 // =======================
-$recipient = 'plischekjoshua@web.de';
-$subject   = "Kontaktformular von $name <$email>";
+$recipient = 'info@jpsystems.me';
+$subject   = "Anfrage von $name <$email>";
 
 $safeName    = htmlspecialchars(strip_tags($name));
 $safeEmail   = htmlspecialchars(strip_tags($email));
 $safeMessage = nl2br(htmlspecialchars(strip_tags($message)));
 
 $body = "
-    <strong>Von:</strong> {$safeName} &lt;{$safeEmail}&gt;<br><br>
+    <strong>Von:</strong><br>
+    {$safeName} 
+    <br>
+    <br>
+    <strong>Email:</strong> &lt;{$safeEmail}&gt;<br><br>
     <strong>Nachricht:</strong><br>{$safeMessage}
 ";
 
 $headers = [
     'MIME-Version: 1.0',
     'Content-type: text/html; charset=utf-8',
-    'From: plischekjoshua@web.de',
+    'From: info@jpsystems.me',
     'X-Mailer: PHP/' . phpversion()
 ];
 
