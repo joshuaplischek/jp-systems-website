@@ -14,7 +14,6 @@ import { MobileNavComponent } from "./mobile-nav/mobile-nav.component";
   selector: 'app-main',
   standalone: true,
   imports: [
-    NavbarComponent,
     HeroComponent,
     LeistungenComponent,
     AboutComponent,
@@ -22,7 +21,6 @@ import { MobileNavComponent } from "./mobile-nav/mobile-nav.component";
     TeamComponent,
     ContactComponent,
     FooterComponent,
-    MobileNavComponent
 ],
   templateUrl: './main.component.html',
   styleUrl: './main.component.scss',

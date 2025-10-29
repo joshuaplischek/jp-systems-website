@@ -7,6 +7,13 @@ section {
   align-items: center;
   @media (max-width: 990px) {
     padding: 2rem 2.5rem;
+    .leistungen-content{
+      .leistungen-heading{
+        h2{
+          text-align: center;
+        }
+      }
+    }
   }
   .leistungen-content {
     display: flex;

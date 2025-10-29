@@ -88,7 +88,9 @@ section {
   @media (max-width: 990px) {
     flex-direction: column;
     gap: 2rem;
-    padding: 2.5rem;
+    height: 100%;
+    padding: 0 2.5rem;
+    margin-top: 4rem;
     > div {
       display: flex;
       flex-direction: column;
