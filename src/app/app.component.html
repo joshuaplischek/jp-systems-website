@@ -1,7 +1,10 @@
+<div class="content">
   @if (!isMobile) {
-    <app-navbar class="navbar"></app-navbar>
+  <app-navbar class="navbar"></app-navbar>
+  } @if (isMobile) {
+  <app-mobile-nav class="navbar"></app-mobile-nav>
   }
-  @if (isMobile) {
-    <app-mobile-nav class="navbar"></app-mobile-nav>
-  }
-<router-outlet/>
+  <div class="router">
+    <router-outlet></router-outlet>
+  </div>
+</div>
